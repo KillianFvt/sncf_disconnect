@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 import 'package:sncf_disconnect/constants/colors.dart';
+import 'package:sncf_disconnect/pages/main_section.dart';
 import 'package:sncf_disconnect/providers/app_provider.dart';
 import 'package:sncf_disconnect/widgets/appbar/appbar_item.dart';
 import 'package:sncf_disconnect/widgets/appbar/bottom_appbar.dart';
@@ -22,6 +23,19 @@ class _SNCFDisconnectState extends State<SNCFDisconnect> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'SNCF Disconnect',
+      color: sncfBlue,
+      theme: ThemeData(
+        primaryColor: sncfBlue,
+        colorScheme: ColorScheme.fromSwatch().copyWith(
+          primary: sncfBlue,
+          secondary: sncfLightBlue,
+        ),
+        textSelectionTheme: const TextSelectionThemeData(
+          cursorColor: sncfBlue,
+          selectionColor: sncfLightBlue,
+          selectionHandleColor: sncfLightBlue,
+        )
+      ),
       home: ChangeNotifierProvider(
         create: (context) => AppProvider(),
         builder: (context, child) {
@@ -42,17 +56,7 @@ class _SNCFDisconnectState extends State<SNCFDisconnect> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Expanded(
-                            child: Center(
-                              child: Text(
-                                  'SNCF DISCONNECT',
-                                  style: TextStyle(
-                                    color: sncfAWhite,
-                                    fontSize: 24,
-                                  ),
-                              ),
-                            ),
-                          ),
+                          MainSection(),
                           BottomAppbar()
                         ],
                       ),

@@ -66,6 +66,7 @@ flutter:
     - assets/logos/
     - assets/icons/
     - assets/icons/appbar/
+    - assets/illustrations/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
@@ -106,3 +107,99 @@ flutter:
         - asset: assets/fonts/avenir/AvenirLTStd-Oblique.otf
           style: italic
         - asset: assets/fonts/avenir/AvenirLTStd-Roman.otf
+
+    - family: Area
+      fonts:
+        - asset: assets/fonts/icon_fonts/Area.ttf
+
+    - family: CardsAndSubscriptions
+      fonts:
+        - asset: assets/fonts/icon_fonts/CardsAndSubscriptions.ttf
+
+    - family: Classes
+      fonts:
+        - asset: assets/fonts/icon_fonts/Classes.ttf
+
+    - family: Communication
+      fonts:
+        - asset: assets/fonts/icon_fonts/Communication.ttf
+
+    - family: Divers
+      fonts:
+        - asset: assets/fonts/icon_fonts/Divers.ttf
+
+    - family: Idfm
+      fonts:
+        - asset: assets/fonts/icon_fonts/Idfm.ttf
+
+    - family: Luggage
+      fonts:
+        - asset: assets/fonts/icon_fonts/Luggage.ttf
+
+    - family: MEA
+      fonts:
+        - asset: assets/fonts/icon_fonts/MEA.ttf
+
+    - family: MaterialIcons
+      fonts:
+        - asset: assets/fonts/icon_fonts/MaterialIcons-Regular.otf
+
+    - family: Mobility
+      fonts:
+        - asset: assets/fonts/icon_fonts/Mobility.ttf
+
+    - family: Native
+      fonts:
+        - asset: assets/fonts/icon_fonts/Native.ttf
+
+    - family: NavigationAndAction
+      fonts:
+        - asset: assets/fonts/icon_fonts/NavigationAndAction.ttf
+
+    - family: Payment
+      fonts:
+        - asset: assets/fonts/icon_fonts/Payment.ttf
+
+    - family: Placement
+      fonts:
+        - asset: assets/fonts/icon_fonts/Placement.ttf
+
+    - family: PlainCircle
+      fonts:
+        - asset: assets/fonts/icon_fonts/PlainCircle.ttf
+
+    - family: Satisfaction
+      fonts:
+        - asset: assets/fonts/icon_fonts/Satisfaction.ttf
+
+    - family: Services
+      fonts:
+        - asset: assets/fonts/icon_fonts/Services.ttf
+
+    - family: Sleeping
+      fonts:
+        - asset: assets/fonts/icon_fonts/Sleeping.ttf
+
+    - family: SocialNetworks
+      fonts:
+        - asset: assets/fonts/icon_fonts/SocialNetworks.ttf
+
+    - family: Supplier
+      fonts:
+        - asset: assets/fonts/icon_fonts/Supplier.ttf
+
+    - family: Transporters
+      fonts:
+        - asset: assets/fonts/icon_fonts/Transporters.ttf
+
+    - family: Transports
+      fonts:
+        - asset: assets/fonts/icon_fonts/Transports.ttf
+
+    - family: Typology
+      fonts:
+        - asset: assets/fonts/icon_fonts/Typology.ttf
+
+    - family: Walk
+      fonts:
+        - asset: assets/fonts/icon_fonts/Walk.ttf

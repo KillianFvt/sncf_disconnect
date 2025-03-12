@@ -14,5 +14,5 @@ const Color sncfAWhite = Color(0xFFffffff);
 const Color sncfPurple = Color(0xFF762be2);
 const Color sncfLightPurple = Color(0xFFDFA9FF);
 const Color sncfPink = Color(0xFFff5072);
+const Color sncfLihgtPink = Color(0xFFF59AC3);
 const Color sncfYellow = Color(0xFFF5BD57);
-
