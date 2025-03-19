@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:sncf_disconnect/widgets/animated_svg/animated_svg.dart';
 import 'package:sncf_disconnect/widgets/search/trip_search_input.dart';
 
 import '../constants/colors.dart';
@@ -77,6 +78,18 @@ class _HomePageState extends State<HomePage> {
                   color: sncfLihgtPink,
                 )
               ],
+            ),
+          ),
+
+          const SizedBox(
+            width: 300,
+            height: 300,
+            child: AnimatedSvgPath(
+                svgAsset: "assets/illustrations/confirmed.svg",
+                pathClass: "animated-confirm",
+                strokeColor: Colors.red,
+                strokeWidth: 3,
+                animationDuration: Duration(seconds: 3)
             ),
           ),
         ],
