@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:sncf_disconnect/extensions/curves.dart';
 import 'package:sncf_disconnect/widgets/animated_svg/animated_svg.dart';
 import 'package:sncf_disconnect/widgets/search/trip_search_input.dart';
 
@@ -19,11 +20,15 @@ class _HomePageState extends State<HomePage> {
       child: Column(
         children: [
           SizedBox(height: MediaQuery.of(context).padding.top),
-          SvgPicture.asset(
-            // TODO this is not the right asset
-            "assets/illustrations/train.svg",
-            width: MediaQuery.of(context).size.width,
-            colorFilter: const ColorFilter.mode(sncfLightBlue, BlendMode.srcIn),
+          SizedBox(
+            height: 155,
+            child: SvgPicture.asset(
+              // TODO this is not the right asset
+              "assets/illustrations/train.svg",
+              width: MediaQuery.of(context).size.width,
+              colorFilter: const ColorFilter.mode(sncfLightBlue, BlendMode.srcIn),
+              placeholderBuilder: (context) => const SizedBox(height: 155),
+            ),
           ),
 
           const Padding(
@@ -78,18 +83,6 @@ class _HomePageState extends State<HomePage> {
                   color: sncfLihgtPink,
                 )
               ],
-            ),
-          ),
-
-          const SizedBox(
-            width: 300,
-            height: 300,
-            child: AnimatedSvgPath(
-                svgAsset: "assets/illustrations/confirmed.svg",
-                pathClass: "animated-confirm",
-                strokeColor: Colors.red,
-                strokeWidth: 3,
-                animationDuration: Duration(seconds: 3)
             ),
           ),
         ],
