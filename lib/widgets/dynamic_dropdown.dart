@@ -1,4 +1,3 @@
-import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:sncf_disconnect/constants/colors.dart';
@@ -11,6 +10,7 @@ class DynamicDropdown extends StatefulWidget {
   final double width;
   final List<Widget> children;
   final bool isExpanded;
+  final bool isExpandable;
   final double radius;
   final Widget headerIcon;
 
@@ -18,10 +18,11 @@ class DynamicDropdown extends StatefulWidget {
     super.key,
     required this.headerTitle,
     required this.headerSubtitle,
-    required this.headerHeight,
-    required this.width,
+    this.headerHeight = 70,
+    this.width = double.infinity,
     required this.children,
     required this.isExpanded,
+    this.isExpandable = true,
     required this.headerIcon,
     this.radius = 15,
   });
@@ -73,63 +74,68 @@ class _DynamicDropdownState extends State<DynamicDropdown> with SingleTickerProv
 
   @override
   Widget build(BuildContext context) {
-    return AnimatedBuilder(
-      animation: _controller,
-      builder: (context, child) {
-        return DecoratedBox(
-          decoration: BoxDecoration(
-            color: sncfDarkGreyBlue,
-            borderRadius: BorderRadius.circular(widget.radius),
-            border: Border.all(
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 5.0),
+      child: AnimatedBuilder(
+        animation: _controller,
+        builder: (context, child) {
+          return DecoratedBox(
+            decoration: BoxDecoration(
               color: sncfDarkGreyBlue,
-              width: 1,
+              borderRadius: BorderRadius.circular(widget.radius),
+              border: Border.all(
+                color: sncfDarkGreyBlue,
+                width: 1,
+              ),
             ),
-          ),
-          child: SizedBox(
-            width: widget.width,
-            child: Column(
-              children: [
-                DynamicDropdownHeader(
-                    headerTitle: widget.headerTitle,
-                    headerSubtitle: widget.headerSubtitle,
-                    headerHeight: widget.headerHeight,
-                    headerIcon: widget.headerIcon,
-                    radius: widget.radius,
-                    animation: _animation,
-                    toggleExpand: toggleExpand
-                ),
-                ClipRRect(
-                  borderRadius: BorderRadius.vertical(
-                    bottom: Radius.circular(widget.radius),
+            child: SizedBox(
+              width: widget.width,
+              child: Column(
+                children: [
+                  DynamicDropdownHeader(
+                      headerTitle: widget.headerTitle,
+                      headerSubtitle: widget.headerSubtitle,
+                      headerHeight: widget.headerHeight,
+                      headerIcon: widget.headerIcon,
+                      radius: widget.radius,
+                      animation: _animation,
+                      toggleExpand: toggleExpand,
+                      isExpandable: widget.isExpandable,
                   ),
-                  child: Align(
-                    heightFactor: _animation.value,
-                    child: AnimatedSize(
-                      duration: const Duration(milliseconds: 300),
-                      curve: Curves.fastOutSlowIn,
-                      child: LayoutBuilder(
-                        builder: (context, constraints) {
-                          return Column(
-                            children: [
-                              const Divider(
-                                color: sncfDarkBlue,
-                                thickness: 3,
-                                height: 3,
-                              ),
 
-                              ...widget.children,
-                            ],
-                          );
-                        },
+                  if (widget.isExpandable) ClipRRect(
+                    borderRadius: BorderRadius.vertical(
+                      bottom: Radius.circular(widget.radius),
+                    ),
+                    child: Align(
+                      heightFactor: _animation.value,
+                      child: AnimatedSize(
+                        duration: const Duration(milliseconds: 300),
+                        curve: Curves.fastOutSlowIn,
+                        child: LayoutBuilder(
+                          builder: (context, constraints) {
+                            return Column(
+                              children: [
+                                const Divider(
+                                  color: sncfDarkBlue,
+                                  thickness: 3,
+                                  height: 3,
+                                ),
+
+                                ...widget.children,
+                              ],
+                            );
+                          },
+                        ),
                       ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-        );
-      },
+          );
+        },
+      ),
     );
   }
 }

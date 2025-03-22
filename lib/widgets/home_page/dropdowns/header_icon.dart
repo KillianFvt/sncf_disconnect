@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 
-import '../../../constants/colors.dart';
 
 class HeaderIcon extends StatelessWidget {
   const HeaderIcon({
     super.key,
     required this.iconData,
     required this.color,
+    this.size = 37,
   });
 
   final IconData iconData;
   final Color color;
+  final double size;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +24,7 @@ class HeaderIcon extends StatelessWidget {
         child: Icon(
           iconData,
           color: color,
-          size: 37,
+          size: size,
         ),
       ),
     );

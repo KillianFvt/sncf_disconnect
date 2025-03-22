@@ -206,3 +206,7 @@ flutter:
     - family: Walk
       fonts:
         - asset: assets/fonts/icon_fonts/Walk.ttf
+
+    - family: ReworkedIcons
+      fonts:
+        - asset: assets/fonts/icon_fonts/ReworkedIcons.ttf

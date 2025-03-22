@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:sncf_disconnect/extensions/curves.dart';
-import 'package:sncf_disconnect/widgets/animated_svg/animated_svg.dart';
-import 'package:sncf_disconnect/widgets/dynamic_dropdown.dart';
+import 'package:sncf_disconnect/widgets/home_page/dropdowns/itinerary_dropdown.dart';
 import 'package:sncf_disconnect/widgets/home_page/dropdowns/station_schedule_dropdown.dart';
+import 'package:sncf_disconnect/widgets/home_page/dropdowns/traffic_info_network_dropdown.dart';
+import 'package:sncf_disconnect/widgets/home_page/dropdowns/upcoming_trips_dropdown.dart';
 import 'package:sncf_disconnect/widgets/search/trip_search_input.dart';
 
 import '../constants/colors.dart';
@@ -64,31 +64,10 @@ class _HomePageState extends State<HomePage> {
 
                 SizedBox(height: 16),
 
-
                 IgnorePointer(
                   ignoring: false,
                   child: TripSearchInput(showMic: false)
                 ),
-                
-                /*Icon(
-                  IconData(0xF115, fontFamily: "Mobility"),
-                  color: sncfLightPurple,
-                ),
-
-                Icon(
-                  IconData(0xF108, fontFamily: "Mobility"),
-                  color: sncfYellow,
-                ),
-
-                Icon(
-                  IconData(0xF14F, fontFamily: "NavigationAndAction"),
-                  color: sncfLihgtPink,
-                ),
-
-                Icon(
-                  IconData(0xF118, fontFamily: "Mobility"),
-                  color: sncfTurquoise,
-                ),*/
 
                 SizedBox(height: 32),
 
@@ -103,9 +82,12 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
 
-                SizedBox(height: 16),
+                SizedBox(height: 12),
 
-                StationScheduleDropdown()
+                StationScheduleDropdown(),
+                ItineraryDropdown(),
+                TrafficInfoNetworkDropdown(),
+                UpcomingTripsDropdown(),
               ],
             ),
           ),

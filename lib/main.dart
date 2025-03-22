@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 import 'package:sncf_disconnect/constants/colors.dart';
 import 'package:sncf_disconnect/pages/main_section.dart';
 import 'package:sncf_disconnect/providers/app_provider.dart';
-import 'package:sncf_disconnect/widgets/appbar/appbar_item.dart';
 import 'package:sncf_disconnect/widgets/appbar/bottom_appbar.dart';
 
 void main() {
@@ -34,7 +32,7 @@ class _SNCFDisconnectState extends State<SNCFDisconnect> {
           cursorColor: sncfBlue,
           selectionColor: sncfLightBlue,
           selectionHandleColor: sncfLightBlue,
-        )
+        ),
       ),
       home: ChangeNotifierProvider(
         create: (context) => AppProvider(),
@@ -47,19 +45,14 @@ class _SNCFDisconnectState extends State<SNCFDisconnect> {
                   scaffoldBackgroundColor: sncfDarkBlue,
                   fontFamily: "Avenir",
                 ),
-                child: DefaultTextStyle.merge(
-                  style: const TextStyle(
-                    color: Colors.red,
-                  ),
-                  child: const Scaffold(
-                    body: Center(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          MainSection(),
-                          BottomAppbar()
-                        ],
-                      ),
+                child: const Scaffold(
+                  body: Center(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        MainSection(),
+                        BottomAppbar()
+                      ],
                     ),
                   ),
                 ),
