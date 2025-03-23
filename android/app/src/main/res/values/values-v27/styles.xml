@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Base.Theme.SplashScreen" parent="@style/Base.v27.Theme.SplashScreen" />
+    <style name="Base.Theme.SplashScreen.Light" parent="@style/Base.v27.Theme.SplashScreen.Light" />
+    <style name="MTS__Theme.MTicketSDK" parent="@style/MTS__Theme.MTicketSDK.V27" />
+    <style name="SdkTheme" parent="@style/Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/backgroundColor</item>
+        <item name="android:fitsSystemWindows">false</item>
+        <item name="android:windowSoftInputMode">adjustPan|stateHidden</item>
+        <item name="android:splitMotionEvents">false</item>
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:colorPrimary">@color/idfmPrimary</item>
+        <item name="android:colorPrimaryDark">@color/idfmPrimaryDark</item>
+        <item name="android:colorAccent">@color/idfmAccent</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:ambientShadowAlpha">0.05</item>
+        <item name="android:spotShadowAlpha">0.05</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">never</item>
+        <item name="bottomSheetDialogTheme">@style/CustomBottomSheetDialog</item>
+        <item name="colorAccent">@color/idfmAccent</item>
+        <item name="colorBackgroundFloating">@color/dialogBackgroundColor</item>
+        <item name="colorPrimary">@color/idfmPrimary</item>
+        <item name="colorPrimaryDark">@color/idfmPrimaryDark</item>
+    </style>
+    <style name="Base.v27.Theme.SplashScreen" parent="@style/Base.v21.Theme.SplashScreen">
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+    </style>
+    <style name="Base.v27.Theme.SplashScreen.Light" parent="@style/Base.v21.Theme.SplashScreen.Light">
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+    </style>
+    <style name="MTS__Theme.MTicketSDK.V27" parent="@style/MTS__Theme.MTicketSDK.V23" />
+</resources>
