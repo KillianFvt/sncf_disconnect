@@ -4,6 +4,9 @@ import 'package:sncf_disconnect/widgets/home_page/dropdowns/itinerary_dropdown.d
 import 'package:sncf_disconnect/widgets/home_page/dropdowns/station_schedule_dropdown.dart';
 import 'package:sncf_disconnect/widgets/home_page/dropdowns/traffic_info_network_dropdown.dart';
 import 'package:sncf_disconnect/widgets/home_page/dropdowns/upcoming_trips_dropdown.dart';
+import 'package:sncf_disconnect/widgets/home_page/home_ad_travel_cheaper.dart';
+import 'package:sncf_disconnect/widgets/home_page/home_xsell.dart';
+import 'package:sncf_disconnect/widgets/misc/ad_btns.dart';
 import 'package:sncf_disconnect/widgets/search/trip_search_input.dart';
 
 import '../constants/colors.dart';
@@ -28,7 +31,7 @@ class _HomePageState extends State<HomePage> {
               // TODO this is not the right asset
               "assets/illustrations/train.svg",
               width: MediaQuery.of(context).size.width,
-              colorFilter: const ColorFilter.mode(sncfLightBlue, BlendMode.srcIn),
+              colorFilter: const ColorFilter.mode(sncfIllustrationBlue, BlendMode.srcIn),
               placeholderBuilder: (context) => const SizedBox(height: 155),
             ),
           ),
@@ -88,6 +91,26 @@ class _HomePageState extends State<HomePage> {
                 ItineraryDropdown(),
                 TrafficInfoNetworkDropdown(),
                 UpcomingTripsDropdown(),
+
+                SizedBox(height: 55),
+
+                HomeXsell(),
+
+                SizedBox(height: 35),
+
+                Text(
+                  "Voyager moins cher",
+                  textAlign: TextAlign.start,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+
+                SizedBox(height: 14),
+
+                HomeAdTravelCheaper(),
               ],
             ),
           ),

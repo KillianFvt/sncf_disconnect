@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:sncf_disconnect/constants/colors.dart';
+import 'package:sncf_disconnect/constants/constants.dart';
 import 'package:sncf_disconnect/widgets/home_page/dropdowns/dynamic_dropdown_header.dart';
 
 class DynamicDropdown extends StatefulWidget {
@@ -24,7 +25,7 @@ class DynamicDropdown extends StatefulWidget {
     required this.isExpanded,
     this.isExpandable = true,
     required this.headerIcon,
-    this.radius = 15,
+    this.radius = kBorderRadius,
   });
 
   @override

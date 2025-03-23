@@ -65,9 +65,8 @@ class _DynamicDropdownHeaderState extends State<DynamicDropdownHeader> {
                 elevation: 0,
                 highlightElevation: 0,
                 hoverElevation: 0,
-                splashColor: sncfLightBlue.withValues(alpha: 0.25),
-                highlightColor: sncfLightBlue.withValues(alpha: 0.25),
-                colorBrightness: Brightness.dark,
+                splashColor: sncfBlue.withValues(alpha: 0.25),
+                highlightColor: sncfBlue.withValues(alpha: 0.25),
 
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,

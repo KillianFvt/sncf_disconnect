@@ -17,3 +17,4 @@ const Color sncfPink = Color(0xFFff5072);
 const Color sncfLightPink = Color(0xFFF59AC3);
 const Color sncfYellow = Color(0xFFFBC461);
 const Color sncfTurquoise = Color(0xFF7EDAD5);
+const Color sncfIllustrationBlue = Color(0xFF7BBFFC);
