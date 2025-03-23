@@ -349,10 +349,6 @@
     <string name="gcm_defaultSenderId">230391479456</string>
     <string name="glance_error_layout_text">Check the exact error using <tt><b>adb logcat</b></tt>, searching for <tt><b>GlanceAppWidget</b></tt></string>
     <string name="glance_error_layout_title"><b>Glance App Widget Error</b></string>
-    <string name="google_api_key">AIzaSyCWqmKKSdQ7KfBJVfyU_wBAvRfUDQTduSA</string>
-    <string name="google_app_id">1:230391479456:android:f064ee14b5363832cc5dc5</string>
-    <string name="google_crash_reporting_api_key">AIzaSyCWqmKKSdQ7KfBJVfyU_wBAvRfUDQTduSA</string>
-    <string name="google_storage_bucket">invictus-bdd7b.appspot.com</string>
     <string name="gsm_not_connected">To install your NFC services, make sure having a good network coverage 3G/4G</string>
     <string name="hide_bottom_view_on_scroll_behavior">com.google.android.material.behavior.HideBottomViewOnScrollBehavior</string>
     <string name="iccid_cannot_read">The UICC is unreadable</string>
@@ -1488,6 +1484,4 @@ If you uninstalled this app after your purchase, the ticket cannot be displayed.
     <string name="widget_station_board_no_stations_title_saved">Aucune gare enregistrée</string>
     <string name="widget_station_board_see_station">Voir vos horaires enregistrés</string>
     <string name="widget_station_board_updated_at">Mis à jour à %s</string>
-    <string name="wizway_pf_url_debug">https://app.preprod.wizway.fr/wizway-mobileproxy/</string>
-    <string name="wizway_pf_url_prod">https://app.wizway.fr/wizway-mobileproxy/</string>
 </resources>
