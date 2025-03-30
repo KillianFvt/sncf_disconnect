@@ -6,7 +6,9 @@ import 'package:sncf_disconnect/providers/app_provider.dart';
 import 'package:sncf_disconnect/widgets/appbar/bottom_appbar.dart';
 
 void main() {
-  runApp(const SNCFDisconnect());
+  runApp(
+      const SNCFDisconnect()
+  );
 }
 
 class SNCFDisconnect extends StatefulWidget {
@@ -22,38 +24,23 @@ class _SNCFDisconnectState extends State<SNCFDisconnect> {
     return MaterialApp(
       title: 'SNCF Disconnect',
       color: sncfBlue,
-      theme: ThemeData(
-        primaryColor: sncfBlue,
-        colorScheme: ColorScheme.fromSwatch().copyWith(
-          primary: sncfBlue,
-          secondary: sncfLightBlue,
-        ),
-        textSelectionTheme: const TextSelectionThemeData(
-          cursorColor: sncfBlue,
-          selectionColor: sncfLightBlue,
-          selectionHandleColor: sncfLightBlue,
-        ),
-      ),
+      debugShowCheckedModeBanner: false,
+      themeMode: ThemeMode.dark,
+      theme: appTheme,
+      darkTheme: appTheme,
       home: ChangeNotifierProvider(
         create: (context) => AppProvider(),
         builder: (context, child) {
           return Consumer<AppProvider>(
             builder: (context, appProvider, child) {
-              return Theme(
-                data: ThemeData(
-                  primaryColor: sncfBlue,
-                  scaffoldBackgroundColor: sncfDarkBlue,
-                  fontFamily: "Avenir",
-                ),
-                child: const Scaffold(
-                  body: Center(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        MainSection(),
-                        BottomAppbar()
-                      ],
-                    ),
+              return const Scaffold(
+                body: Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      MainSection(),
+                      BottomAppbar()
+                    ],
                   ),
                 ),
               );
@@ -64,3 +51,20 @@ class _SNCFDisconnectState extends State<SNCFDisconnect> {
     );
   }
 }
+
+ThemeData appTheme = ThemeData(
+  fontFamily: "Avenir",
+  primaryColor: sncfBlue,
+  scaffoldBackgroundColor: sncfDarkBlue,
+  colorScheme: ColorScheme.fromSwatch().copyWith(
+    primary: sncfBlue,
+    secondary: sncfLightBlue,
+  ),
+  splashColor: sncfBlue.withValues(alpha: 0.25),
+  highlightColor: sncfBlue.withValues(alpha: 0.25),
+  textSelectionTheme: const TextSelectionThemeData(
+    cursorColor: sncfBlue,
+    selectionColor: sncfLightBlue,
+    selectionHandleColor: sncfLightBlue,
+  ),
+);

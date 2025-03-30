@@ -9,64 +9,69 @@ class HomeAdTravelCheaper extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(kBorderRadius),
-      child: DecoratedBox(
-        decoration: const BoxDecoration(
-          color: sncfDarkGreyBlue,
-        ),
-        child: Stack(
-          children: [
-            Column(
-              children: [
-                SizedBox(
-                  height: 160,
-                  width: double.infinity,
-                  child: Image.asset(
-                    "assets/images/calanques-marseilles.jpg",
-                    fit: BoxFit.cover,
-                    alignment: Alignment.topCenter
-                  ),
-                ),
-
-                const Padding(
-                  padding: EdgeInsets.all(16.0),
-                  child: SizedBox(
-                    height: 100,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Ouverture des ventes été",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 14,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-
-                        SizedBox(height: 3,),
-
-                        Text(
-                          "Les meilleures offres vers la France et l'Europe sont disponibles !",
-                          style: TextStyle(
-                            color: sncfGrey,
-                            fontSize: 14,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                      ],
+    return GestureDetector(
+      onTap: () {
+        // TODO navigate to the offer page
+      },
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(kBorderRadius),
+        child: DecoratedBox(
+          decoration: const BoxDecoration(
+            color: sncfDarkGreyBlue,
+          ),
+          child: Stack(
+            children: [
+              Column(
+                children: [
+                  SizedBox(
+                    height: 160,
+                    width: double.infinity,
+                    child: Image.asset(
+                      "assets/images/calanques-marseilles.jpg",
+                      fit: BoxFit.cover,
+                      alignment: Alignment.topCenter
                     ),
                   ),
-                )
-              ],
-            ),
-            const Positioned(
-              top: 0,
-              right: 0,
-              child: AdBtns(),
-            )
-          ],
+
+                  const Padding(
+                    padding: EdgeInsets.all(16.0),
+                    child: SizedBox(
+                      height: 100,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Ouverture des ventes été",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+
+                          SizedBox(height: 3,),
+
+                          Text(
+                            "Les meilleures offres vers la France et l'Europe sont disponibles !",
+                            style: TextStyle(
+                              color: sncfGrey,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  )
+                ],
+              ),
+              const Positioned(
+                top: 0,
+                right: 0,
+                child: AdBtns(),
+              )
+            ],
+          ),
         ),
       ),
     );

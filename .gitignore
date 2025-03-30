@@ -46,8 +46,6 @@ app.*.map.json
 .fvm/
 *.apk
 *.xapk
-/refs/*
-/refs
-refs/
-refs/*
-refs
+/refs/sncf-connect/*
+/refs/sncf-connect/
+/refs/sncf-connect

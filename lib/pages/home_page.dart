@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:sncf_disconnect/pages/trip_search_page.dart';
 import 'package:sncf_disconnect/widgets/home_page/dropdowns/itinerary_dropdown.dart';
 import 'package:sncf_disconnect/widgets/home_page/dropdowns/station_schedule_dropdown.dart';
 import 'package:sncf_disconnect/widgets/home_page/dropdowns/traffic_info_network_dropdown.dart';
@@ -36,14 +37,14 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
 
-          const Padding(
-            padding: EdgeInsets.all(16.0),
+          Padding(
+            padding: const EdgeInsets.all(16.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
 
-                Text(
+                const Text(
                   "Bonjour 👋",
                   textAlign: TextAlign.start,
                   style: TextStyle(
@@ -52,9 +53,9 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
 
-                SizedBox(height: 16),
+                const SizedBox(height: 16),
 
-                Text(
+                const Text(
                   "Recherchez une destination, un trajet, un numéro de train...",
                   textAlign: TextAlign.start,
                   style: TextStyle(
@@ -65,16 +66,19 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
 
-                SizedBox(height: 16),
+                const SizedBox(height: 16),
 
-                IgnorePointer(
-                  ignoring: false,
-                  child: TripSearchInput(showMic: false)
+                GestureDetector(
+                  onTap: () => displayTripSearchPage(context),
+                  child: const AbsorbPointer(
+                    absorbing: true,
+                    child: TripSearchInput(showMic: false)
+                  ),
                 ),
 
-                SizedBox(height: 32),
+                const SizedBox(height: 32),
 
-                Text(
+                const Text(
                   "Simplifiez vos trajets",
                   textAlign: TextAlign.start,
                   style: TextStyle(
@@ -85,20 +89,20 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
 
-                SizedBox(height: 12),
+                const SizedBox(height: 12),
 
-                StationScheduleDropdown(),
-                ItineraryDropdown(),
-                TrafficInfoNetworkDropdown(),
-                UpcomingTripsDropdown(),
+                const StationScheduleDropdown(),
+                const ItineraryDropdown(),
+                const TrafficInfoNetworkDropdown(),
+                const UpcomingTripsDropdown(),
 
-                SizedBox(height: 55),
+                const SizedBox(height: 55),
 
-                HomeXsell(),
+                const HomeXsell(),
 
-                SizedBox(height: 35),
+                const SizedBox(height: 35),
 
-                Text(
+                const Text(
                   "Voyager moins cher",
                   textAlign: TextAlign.start,
                   style: TextStyle(
@@ -108,9 +112,9 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
 
-                SizedBox(height: 14),
+                const SizedBox(height: 14),
 
-                HomeAdTravelCheaper(),
+                const HomeAdTravelCheaper(),
               ],
             ),
           ),
