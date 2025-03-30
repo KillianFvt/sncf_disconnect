@@ -8,12 +8,15 @@ class TripResultCatTxt extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      title,
-      style: const TextStyle(
-        fontSize: 18,
-        fontWeight: FontWeight.bold,
-        color: sncfGrey,
+    return Padding(
+      padding: const EdgeInsets.only(left: 16.0, bottom: 5),
+      child: Text(
+        title,
+        style: const TextStyle(
+          fontSize: 18,
+          fontWeight: FontWeight.bold,
+          color: sncfGrey,
+        ),
       ),
     );
   }

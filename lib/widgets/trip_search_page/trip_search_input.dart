@@ -8,11 +8,13 @@ class TripSearchInput extends StatefulWidget {
     this.size = 56,
     this.showMic = false,
     this.controller,
+    this.onChanged,
   });
 
   final double size;
   final bool showMic;
   final TextEditingController? controller;
+  final void Function(String)? onChanged;
 
   @override
   State<TripSearchInput> createState() => _TripSearchInputState();
@@ -61,6 +63,8 @@ class _TripSearchInputState extends State<TripSearchInput> {
                 child: TextFormField(
                   controller: _controller,
                   focusNode: _focusNode,
+                  textInputAction: TextInputAction.search,
+                  onChanged: widget.onChanged,
                   decoration: const InputDecoration(
                     hintText: "Où Voulez-vous partir ?",
                     hintStyle: TextStyle(

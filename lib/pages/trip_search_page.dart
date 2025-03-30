@@ -17,6 +17,7 @@ class TripSearchPage extends StatelessWidget {
       builder: (context, child) {
         return Consumer<TripSearchProvider>(
           builder: (context, tripSearchProvider, child) {
+
             return Scaffold(
               backgroundColor: sncfDarkBlue,
               appBar: AppBar(
@@ -62,6 +63,13 @@ class TripSearchPage extends StatelessWidget {
                     padding: const EdgeInsets.all(16.0),
                     child: TripSearchInput(
                       controller: tripSearchProvider.textController,
+                      onChanged: (text) {
+                        if (text.trim().isEmpty) {
+                          tripSearchProvider.searchResults.clear();
+                        } else {
+                          tripSearchProvider.search(context, text.trim());
+                        }
+                      },
                     )
                   ),
 

@@ -42,6 +42,7 @@ dependencies:
   path_drawing: ^1.0.1
   dartz: ^0.10.1
   yet_another_json_isolate: ^2.0.3
+  recase: ^4.1.0
 
 dev_dependencies:
   flutter_test:
@@ -72,6 +73,7 @@ flutter:
     - assets/icons/appbar/
     - assets/illustrations/
     - assets/images/
+    - assets/fake_data/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

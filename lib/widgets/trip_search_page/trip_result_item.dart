@@ -89,65 +89,73 @@ class TripResultItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 4.0),
+    return ConstrainedBox(
+      constraints: BoxConstraints(
+        maxWidth: MediaQuery.of(context).size.width,
+        minHeight: 60,
+      ),
       child: MaterialButton(
         onPressed: () {},
         padding: EdgeInsets.zero,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(right: 16.0),
-              child: Icon(
-                icon,
-                color: Colors.white,
-                size: 30,
-              ),
-            ),
-
-            Column(
-              mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  type,
-                  style: const TextStyle(
-                    fontSize: 14,
-                    color: sncfGrey
-                  ),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 16.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(right: 16.0),
+                child: Icon(
+                  icon,
+                  color: Colors.white,
+                  size: 30,
                 ),
+              ),
 
-                RichText(
-                  text: TextSpan(
-                    children: [
-                      TextSpan(
-                        text: title,
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                        ),
+              Flexible(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      type,
+                      style: const TextStyle(
+                        fontSize: 14,
+                        color: sncfGrey
                       ),
-
-                      if (details != null)
-                        TextSpan(
-                          text: " ($details)",
-                          style: const TextStyle(
-                            fontWeight: FontWeight.w600,
-                            color: sncfGrey,
+                    ),
+                
+                    RichText(
+                      text: TextSpan(
+                        children: [
+                          TextSpan(
+                            text: title,
+                            style: const TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
                           ),
+
+                          if (details != null)
+                            TextSpan(
+                              text: " ($details)",
+                              style: const TextStyle(
+                                fontWeight: FontWeight.w600,
+                                color: sncfGrey,
+                              ),
+                            )
+                        ],
+                        style: const TextStyle(
+                          fontFamily: "Avenir",
+                          fontSize: 18,
                         )
-                    ],
-                    style: const TextStyle(
-                      fontFamily: "Avenir",
-                      fontSize: 18,
+                      )
                     )
-                  )
-                )
-              ],
-            )
-          ],
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
