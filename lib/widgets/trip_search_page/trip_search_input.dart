@@ -7,10 +7,12 @@ class TripSearchInput extends StatefulWidget {
     super.key,
     this.size = 56,
     this.showMic = false,
+    this.controller,
   });
 
   final double size;
   final bool showMic;
+  final TextEditingController? controller;
 
   @override
   State<TripSearchInput> createState() => _TripSearchInputState();
@@ -18,7 +20,8 @@ class TripSearchInput extends StatefulWidget {
 
 class _TripSearchInputState extends State<TripSearchInput> {
 
-  final TextEditingController _controller = TextEditingController();
+  late final TextEditingController _controller = widget.controller ?? TextEditingController();
+
   final FocusNode _focusNode = FocusNode();
 
   @override

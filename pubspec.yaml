@@ -41,6 +41,7 @@ dependencies:
   xml: ^6.5.0
   path_drawing: ^1.0.1
   dartz: ^0.10.1
+  yet_another_json_isolate: ^2.0.3
 
 dev_dependencies:
   flutter_test:

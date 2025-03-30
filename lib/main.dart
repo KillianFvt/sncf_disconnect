@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:sncf_disconnect/constants/colors.dart';
 import 'package:sncf_disconnect/pages/main_section.dart';
@@ -6,9 +7,9 @@ import 'package:sncf_disconnect/providers/app_provider.dart';
 import 'package:sncf_disconnect/widgets/appbar/bottom_appbar.dart';
 
 void main() {
-  runApp(
-      const SNCFDisconnect()
-  );
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
+    .then((value) => runApp(const SNCFDisconnect()));
 }
 
 class SNCFDisconnect extends StatefulWidget {

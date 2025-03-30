@@ -1,0 +1,483 @@
+[
+    {
+        "type": "city",
+        "city": "Paris",
+        "region": "\u00cele-de-France"
+    },
+    {
+        "type": "metro_station",
+        "city": "Paris",
+        "region": "\u00cele-de-France",
+        "lines_list": [
+            {
+                "name": "Line 1",
+                "color": "#3357FF"
+            },
+            {
+                "name": "Line 2",
+                "color": "#F3FF33"
+            }
+        ]
+    },
+    {
+        "type": "tram_station",
+        "city": "Paris",
+        "region": "\u00cele-de-France",
+        "lines_list": [
+            {
+                "name": "Line T1",
+                "color": "#FF33F6"
+            },
+            {
+                "name": "Line T2",
+                "color": "#33FFF6"
+            }
+        ]
+    },
+    {
+        "type": "city",
+        "city": "Lyon",
+        "region": "Auvergne-Rh\u00f4ne-Alpes"
+    },
+    {
+        "type": "metro_station",
+        "city": "Lyon",
+        "region": "Auvergne-Rh\u00f4ne-Alpes",
+        "lines_list": [
+            {
+                "name": "Line 1",
+                "color": "#3357FF"
+            },
+            {
+                "name": "Line 2",
+                "color": "#F3FF33"
+            }
+        ]
+    },
+    {
+        "type": "tram_station",
+        "city": "Lyon",
+        "region": "Auvergne-Rh\u00f4ne-Alpes",
+        "lines_list": [
+            {
+                "name": "Line T1",
+                "color": "#FF33F6"
+            },
+            {
+                "name": "Line T2",
+                "color": "#33FFF6"
+            }
+        ]
+    },
+    {
+        "type": "city",
+        "city": "Marseille",
+        "region": "Provence-Alpes-C\u00f4te d'Azur"
+    },
+    {
+        "type": "metro_station",
+        "city": "Marseille",
+        "region": "Provence-Alpes-C\u00f4te d'Azur",
+        "lines_list": [
+            {
+                "name": "Line 1",
+                "color": "#3357FF"
+            },
+            {
+                "name": "Line 2",
+                "color": "#F3FF33"
+            }
+        ]
+    },
+    {
+        "type": "tram_station",
+        "city": "Marseille",
+        "region": "Provence-Alpes-C\u00f4te d'Azur",
+        "lines_list": [
+            {
+                "name": "Line T1",
+                "color": "#FF33F6"
+            },
+            {
+                "name": "Line T2",
+                "color": "#33FFF6"
+            }
+        ]
+    },
+    {
+        "type": "city",
+        "city": "Toulouse",
+        "region": "Occitanie"
+    },
+    {
+        "type": "city",
+        "city": "Nice",
+        "region": "Hauts-de-France"
+    },
+    {
+        "type": "city",
+        "city": "Nantes",
+        "region": "Grand Est"
+    },
+    {
+        "type": "train_station",
+        "city": "Nantes",
+        "region": "Grand Est",
+        "has_tgv": true,
+        "name": "Gare de Nantes",
+        "lines_list": [
+            {
+                "name": "Line A",
+                "color": "#FF5733"
+            },
+            {
+                "name": "Line B",
+                "color": "#33FF57"
+            }
+        ]
+    },
+    {
+        "type": "city",
+        "city": "Strasbourg",
+        "region": "Nouvelle-Aquitaine"
+    },
+    {
+        "type": "train_station",
+        "city": "Strasbourg",
+        "region": "Nouvelle-Aquitaine",
+        "has_tgv": true,
+        "name": "Gare de Strasbourg",
+        "lines_list": [
+            {
+                "name": "Line A",
+                "color": "#FF5733"
+            },
+            {
+                "name": "Line B",
+                "color": "#33FF57"
+            }
+        ]
+    },
+    {
+        "type": "city",
+        "city": "Montpellier",
+        "region": "Pays de la Loire"
+    },
+    {
+        "type": "city",
+        "city": "Bordeaux",
+        "region": "Bretagne"
+    },
+    {
+        "type": "city",
+        "city": "Lille",
+        "region": "Bourgogne-Franche-Comt\u00e9"
+    },
+    {
+        "type": "city",
+        "city": "Rennes",
+        "region": "Bretagne"
+    },
+    {
+        "type": "train_station",
+        "city": "Rennes",
+        "region": "Bretagne",
+        "has_tgv": true,
+        "name": "Gare de Rennes",
+        "lines_list": [
+            {
+                "name": "Line A",
+                "color": "#FF5733"
+            },
+            {
+                "name": "Line B",
+                "color": "#33FF57"
+            }
+        ]
+    },
+    {
+        "type": "metro_station",
+        "city": "Rennes",
+        "region": "Bretagne",
+        "lines_list": [
+            {
+                "name": "Line 1",
+                "color": "#3357FF"
+            },
+            {
+                "name": "Line 2",
+                "color": "#F3FF33"
+            }
+        ]
+    },
+    {
+        "type": "tram_station",
+        "city": "Rennes",
+        "region": "Bretagne",
+        "lines_list": [
+            {
+                "name": "Line T1",
+                "color": "#FF33F6"
+            },
+            {
+                "name": "Line T2",
+                "color": "#33FFF6"
+            }
+        ]
+    },
+    {
+        "type": "city",
+        "city": "Dijon",
+        "region": "Bourgogne-Franche-Comt\u00e9"
+    },
+    {
+        "type": "metro_station",
+        "city": "Dijon",
+        "region": "Bourgogne-Franche-Comt\u00e9",
+        "lines_list": [
+            {
+                "name": "Line 1",
+                "color": "#3357FF"
+            },
+            {
+                "name": "Line 2",
+                "color": "#F3FF33"
+            }
+        ]
+    },
+    {
+        "type": "tram_station",
+        "city": "Dijon",
+        "region": "Bourgogne-Franche-Comt\u00e9",
+        "lines_list": [
+            {
+                "name": "Line T1",
+                "color": "#FF33F6"
+            },
+            {
+                "name": "Line T2",
+                "color": "#33FFF6"
+            }
+        ]
+    },
+    {
+        "type": "city",
+        "city": "Angers",
+        "region": "Pays de la Loire"
+    },
+    {
+        "type": "city",
+        "city": "Tours",
+        "region": "Centre-Val de Loire"
+    },
+    {
+        "type": "train_station",
+        "city": "Tours",
+        "region": "Centre-Val de Loire",
+        "has_tgv": true,
+        "name": "Gare de Tours",
+        "lines_list": [
+            {
+                "name": "Line A",
+                "color": "#FF5733"
+            },
+            {
+                "name": "Line B",
+                "color": "#33FF57"
+            }
+        ]
+    },
+    {
+        "type": "city",
+        "city": "Grenoble",
+        "region": "Auvergne-Rh\u00f4ne-Alpes"
+    },
+    {
+        "type": "train_station",
+        "city": "Grenoble",
+        "region": "Auvergne-Rh\u00f4ne-Alpes",
+        "has_tgv": true,
+        "name": "Gare de Grenoble",
+        "lines_list": [
+            {
+                "name": "Line A",
+                "color": "#FF5733"
+            },
+            {
+                "name": "Line B",
+                "color": "#33FF57"
+            }
+        ]
+    },
+    {
+        "type": "city",
+        "city": "Reims",
+        "region": "Grand Est"
+    },
+    {
+        "type": "train_station",
+        "city": "Reims",
+        "region": "Grand Est",
+        "has_tgv": true,
+        "name": "Gare de Reims",
+        "lines_list": [
+            {
+                "name": "Line A",
+                "color": "#FF5733"
+            },
+            {
+                "name": "Line B",
+                "color": "#33FF57"
+            }
+        ]
+    },
+    {
+        "type": "city",
+        "city": "Le Mans",
+        "region": "Pays de la Loire"
+    },
+    {
+        "type": "train_station",
+        "city": "Le Mans",
+        "region": "Pays de la Loire",
+        "has_tgv": true,
+        "name": "Gare de Le Mans",
+        "lines_list": [
+            {
+                "name": "Line A",
+                "color": "#FF5733"
+            },
+            {
+                "name": "Line B",
+                "color": "#33FF57"
+            }
+        ]
+    },
+    {
+        "type": "city",
+        "city": "Saint-\u00c9tienne",
+        "region": "Auvergne-Rh\u00f4ne-Alpes"
+    },
+    {
+        "type": "train_station",
+        "city": "Saint-\u00c9tienne",
+        "region": "Auvergne-Rh\u00f4ne-Alpes",
+        "has_tgv": true,
+        "name": "Gare de Saint-\u00c9tienne-Ch\u00e2teaucreux",
+        "lines_list": [
+            {
+                "name": "Line A",
+                "color": "#FF5733"
+            },
+            {
+                "name": "Line B",
+                "color": "#33FF57"
+            }
+        ]
+    },
+    {
+        "type": "city",
+        "city": "Brest",
+        "region": "Bretagne"
+    },
+    {
+        "type": "train_station",
+        "city": "Brest",
+        "region": "Bretagne",
+        "has_tgv": true,
+        "name": "Gare de Brest",
+        "lines_list": [
+            {
+                "name": "Line A",
+                "color": "#FF5733"
+            },
+            {
+                "name": "Line B",
+                "color": "#33FF57"
+            }
+        ]
+    },
+    {
+        "type": "city",
+        "city": "Le Havre",
+        "region": "Normandie"
+    },
+    {
+        "type": "point_of_interest",
+        "city": "Paris",
+        "region": "\u00cele-de-France",
+        "name": "Tour Eiffel"
+    },
+    {
+        "type": "point_of_interest",
+        "city": "Lyon",
+        "region": "Auvergne-Rh\u00f4ne-Alpes",
+        "name": "Place Bellecour"
+    },
+    {
+        "type": "point_of_interest",
+        "city": "Marseille",
+        "region": "Provence-Alpes-C\u00f4te d'Azur",
+        "name": "Vieux-Port"
+    },
+    {
+        "type": "point_of_interest",
+        "city": "Rennes",
+        "region": "Bretagne",
+        "name": "Parc du Thabor"
+    },
+    {
+        "type": "point_of_interest",
+        "city": "Dijon",
+        "region": "Bourgogne-Franche-Comt\u00e9",
+        "name": "Palais des Ducs"
+    },
+    {
+        "type": "point_of_interest",
+        "city": "Angers",
+        "region": "Pays de la Loire",
+        "name": "Ch\u00e2teau d'Angers"
+    },
+    {
+        "type": "point_of_interest",
+        "city": "Tours",
+        "region": "Centre-Val de Loire",
+        "name": "Cath\u00e9drale Saint-Gatien"
+    },
+    {
+        "type": "point_of_interest",
+        "city": "Grenoble",
+        "region": "Auvergne-Rh\u00f4ne-Alpes",
+        "name": "Bastille"
+    },
+    {
+        "type": "point_of_interest",
+        "city": "Reims",
+        "region": "Grand Est",
+        "name": "Cath\u00e9drale Notre-Dame"
+    },
+    {
+        "type": "point_of_interest",
+        "city": "Le Mans",
+        "region": "Pays de la Loire",
+        "name": "Circuit des 24 Heures"
+    },
+    {
+        "type": "point_of_interest",
+        "city": "Saint-\u00c9tienne",
+        "region": "Auvergne-Rh\u00f4ne-Alpes",
+        "name": "Mus\u00e9e d'Art Moderne"
+    },
+    {
+        "type": "point_of_interest",
+        "city": "Brest",
+        "region": "Bretagne",
+        "name": "Oc\u00e9anopolis"
+    },
+    {
+        "type": "point_of_interest",
+        "city": "Le Havre",
+        "region": "Normandie",
+        "name": "Mus\u00e9e d'art moderne Andr\u00e9 Malraux"
+    }
+]

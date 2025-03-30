@@ -8,7 +8,7 @@ import 'package:sncf_disconnect/widgets/home_page/dropdowns/upcoming_trips_dropd
 import 'package:sncf_disconnect/widgets/home_page/home_ad_travel_cheaper.dart';
 import 'package:sncf_disconnect/widgets/home_page/home_xsell.dart';
 import 'package:sncf_disconnect/widgets/misc/ad_btns.dart';
-import 'package:sncf_disconnect/widgets/search/trip_search_input.dart';
+import 'package:sncf_disconnect/widgets/trip_search_page/trip_search_input.dart';
 
 import '../constants/colors.dart';
 

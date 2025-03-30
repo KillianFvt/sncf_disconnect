@@ -1,55 +1,81 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:sncf_disconnect/constants/colors.dart';
+import 'package:sncf_disconnect/providers/trip_search_provider.dart';
 import 'package:sncf_disconnect/widgets/trip_search_page/pinned_points_slider.dart';
+import 'package:sncf_disconnect/widgets/trip_search_page/trip_search_results.dart';
 
-import '../widgets/search/trip_search_input.dart';
+import '../widgets/trip_search_page/trip_search_input.dart';
 
 class TripSearchPage extends StatelessWidget {
   const TripSearchPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: sncfDarkBlue,
-      appBar: AppBar(
-        title: const Text(
-            "Rechercher",
-            style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-            )
-        ),
-        leading: const SizedBox.shrink(),
-        leadingWidth: 0,
-        backgroundColor: sncfDarkBlue,
-        elevation: 0,
-        actions: [
-          MaterialButton(
-            onPressed: () => Navigator.pop(context),
-            child: const Text(
-              "Annuler",
-              style: TextStyle(
-                color: sncfLightBlue,
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
+    return ChangeNotifierProvider<TripSearchProvider>(
+      create: (context) => TripSearchProvider(),
+      builder: (context, child) {
+        return Consumer<TripSearchProvider>(
+          builder: (context, tripSearchProvider, child) {
+            return Scaffold(
+              backgroundColor: sncfDarkBlue,
+              appBar: AppBar(
+                title: const Text(
+                    "Rechercher",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                    )
+                ),
+                leading: const SizedBox.shrink(),
+                leadingWidth: 0,
+                backgroundColor: sncfDarkBlue,
+                elevation: 0,
+                actions: [
+                  MaterialButton(
+                    onPressed: () => Navigator.pop(context),
+                    child: const Text(
+                      "Annuler",
+                      style: TextStyle(
+                        color: sncfLightBlue,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  )
+                ],
+                bottom: PreferredSize(
+                    preferredSize: Size(MediaQuery.of(context).size.width, 1),
+                    child: Opacity(
+                      opacity: tripSearchProvider.loading ? 1 : 0,
+                      child: LinearProgressIndicator(
+                        color: sncfLightBlue,
+                        backgroundColor: sncfLightBlue.withValues(alpha: 0.25),
+                      ),
+                    ),
+                ),
               ),
-            ),
-          )
-        ],
-      ),
 
-      body: const Column(
-        children: [
-          Padding(
-            padding: EdgeInsets.all(16.0),
-            child: TripSearchInput()
-          ),
+              body: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: TripSearchInput(
+                      controller: tripSearchProvider.textController,
+                    )
+                  ),
 
-          SizedBox(height: 16),
+                  const SizedBox(height: 16),
 
-          PinnedPointsSlider(),
-        ],
-      ),
+                  const PinnedPointsSlider(),
+
+                  const TripSearchResults()
+                ],
+              ),
+            );
+          }
+        );
+      }
     );
   }
 }
