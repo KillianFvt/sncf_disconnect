@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="sncf_disconnect"
+        android:label="SNCF Disconnect"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
