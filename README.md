@@ -1,16 +1,21 @@
 # sncf_disconnect
 
-A SNCF Connect Clone
+A [SNCF Connect](https://play.google.com/store/apps/details?id=com.vsct.vsc.mobile.horaireetresa.android&hl=fr) Clone app
+
+SNCF Disconnect is a Flutter application developed for Android (iOS version is untested). This application is built using Flutter version 3.29.3.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+To get started with the application, follow the instructions below:
 
-A few resources to get you started if this is your first Flutter project:
+### Prerequisites
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Make sure you have Flutter installed on your machine. You can download and install Flutter from the official [Flutter website](https://flutter.dev/docs/get-started/install).
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Installation
+
+1. Clone the repository:
+
+   ```sh
+   git clone https://github.com/KillianFvt/sncf_disconnect.git
+   cd sncf_disconnect
